@@ -1,0 +1,17 @@
+{
+  "name": "imagetobase64",
+  "version": "1.0.0",
+  "description": "Image to base64 converter",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-packager . ImageToBase64"
+  },
+  "author": "Muhammed ZAİM",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^1.4.13",
+    "electron-packager": "^8.4.0",
+    "electron-prebuilt": "^1.4.13"
+  }
+}

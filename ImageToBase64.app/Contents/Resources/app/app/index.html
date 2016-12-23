@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>İmage To Base64</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Muhammed Zaim(www.muhammedzaim.com)" />
+    <meta name="keywords" content="online, image, optimizer, base64, encoder, base64 encoder, image to base64, image to base64 encoder, online base 64 encoder, online image to base 64 encoder,  ">
+    <meta name="description" content="Online image optimizer and base64 encoder / Çevrimiçi görüntü iyileştirici ve base64 kodlayıcı">
+    <meta property="og:title" content="Online image optimizer and base64 encoder / Çevrimiçi görüntü iyileştirici ve base64 kodlayıcı" />
+    <meta property="og:image" content="Online image optimizer and base64 encoder / Çevrimiçi görüntü iyileştirici ve base64 kodlayıcı" />
+    <meta name="robots" content="index,follow">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+    <meta content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="assets/css/zerocss.css">
+    <link rel="stylesheet" href="assets/css/zerogrid.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<div class="top">
+    İmage To Base64
+</div>
+<div class="container">
+    <div class="row">
+        <div class="ozelresim" style="background-color: #535760; box-shadow: 1px 1px 15px rgba(255,255,255,0.2); margin-bottom: 50px; width: 100%; min-height: 150px;">
+            <div class="fileUpload btn btn-primary">
+                <center>
+                    <span><svg style="color: #fff !important;  padding-top: 35px !important; width: 75px; height: 75px;" width="75px" height="75px" viewBox="0 0 24 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">        <title>1476639300_photo-24</title>    <desc>Created with Sketch.</desc>    <defs></defs>    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">        <g id="1476639300_photo-24" fill="#ffffff">            <g id="Layer_1">                <path d="M18.133,3 L17.2,1 C16.985,0.502 16.125,0 15.374,0 L8.759,0 C8.008,0 7.148,0.502 6.933,1 L6,3 L3,3 C0.611,3 0,5 0,5 L0,19 C0,19 1.5,21 3,21 L21,21 C22.594,21 24,19 24,19 L24,5 C24,5 23.496,3 21,3 L18.133,3 Z M12,18.001 C8.687,18.001 6,15.314 6,12 C6,8.687 8.687,6 12,6 C15.314,6 18,8.687 18,12 C18,15.314 15.314,18.001 12,18.001 L12,18.001 Z M12,8 C9.791,8 8,9.791 8,12 C8,14.209 9.791,16 12,16 C14.209,16 16,14.209 16,12 C16,9.791 14.209,8 12,8 L12,8 Z" id="Shape"></path>            </g>        </g>    </g></svg></span>
+                    <input onchange="encode();" id="image" style="width:100% !important; height: 100% !important;" type="file" class="upload" name="avatar" accept="image/jpg,image/png,image/jpeg,image/gif">
+                </center>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <p style="padding-bottom: 10px;color:#fff;">İmage To Base64</p>
+        <div class="data">
+            <p id="test"></p>
+        </div>
+    </div>
+</div>
+<footer>
+    <a href="https://muhammedzaim.com">Muhammed ZAİM</a> / <a href="https://github.com/muhammedzaimtr">Github Repostory</a>
+</footer>
+<script type='text/javascript'>
+    function encode() {
+        var filesSelected = document.getElementById("image").files;
+        if (filesSelected.length > 0) {
+            var fileToLoad = filesSelected[0];
+            var fileReader = new FileReader();
+            fileReader.onload = function(fileli) {
+                var data = fileli.target.result;
+                var Image2 = document.createElement('img');
+                Image2.src = data;
+                document.getElementById("test").innerHTML = Image2.src;
+                console.log("200 OK");
+            }
+            fileReader.readAsDataURL(fileToLoad);
+        }
+    }
+</script>
+<script src="assets/js/jquery.min.js"></script>
+</body>
+</html>
